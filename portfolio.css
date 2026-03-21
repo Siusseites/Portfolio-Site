@@ -1,0 +1,328 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --accent-color:#2563eb;
+  --grey-color:#616161;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #ffffff; 
+  padding-top: 70px;
+  overflow-x:hidden ;
+}
+
+header{
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 70px;
+}
+
+nav{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  justify-self: center;
+}
+
+.logo{
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  font-size: 30px;
+  color:black;
+}
+
+.nav-link{
+  color: black;
+  text-decoration: none;
+  font-family: 'Inter';
+  cursor: pointer;
+  margin-left: 15px;
+  position: relative;
+}
+
+.nav-link::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+
+.nav-link:hover:after{
+ width: 100%;
+}
+
+.hero-section{
+  width: 100vw;
+  margin-top: 100px;
+}
+
+.hero-container{
+  width: 90%;
+  justify-self: center;
+}
+
+h1{
+  font-size: 140px;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-information{
+  font-family: 'Inter';
+  color: var(--grey-color);
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.cta-btn{
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: all 0.18s ease;
+}
+
+.cta-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.13);
+}
+
+.cta-btn:active{
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.cta-btn a{
+  color: white;
+  font-family: 'Inter';
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.projects-section{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
+
+.projekte-h2{
+  font-size: 40px;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+}
+
+.grid-container{
+  width: 90%;
+  display: grid;
+  justify-self: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 70px auto ;
+  gap: 24px;
+  max-width: 1100px;
+}
+
+.card{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #e0e0e0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-radius: 30px;
+  padding: 15px 0 0 0;
+}
+
+.card img{
+  width: 90%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card-text{
+  border-top: 0.5px solid #e0e0e0;
+  width: 100%;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.card-text h3{
+  font-family: 'Inter';
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+} 
+
+.card-text p{
+  font-family: 'Inter';
+  color: var(--grey-color);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card-text button{
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: all 0.18s ease;
+}
+
+.card-text button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.13);
+}
+
+.card-text button:active{
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.card-text button a{
+  color: white;
+  font-family: 'Inter';
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media(max-width:800px) {
+  .grid-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+.über-mich{
+  width: 100vw;
+  margin-top: 50px;
+}
+
+.über-mich-container{
+  width: 80%;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.über-mich-h2{
+  font-size: 40px;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.information{
+  font-family: 'Inter';
+  color: var(--grey-color);
+  font-size: 18px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 700px;
+}
+
+.kontakt-section{
+  width: 100vw;
+  margin-top: 70px;
+}
+
+.kontakt-container{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kontakt-h2{
+  font-size: 40px;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.kontakt-text{
+  text-align: center;
+  font-family: 'Inter';
+  color: var(--grey-color);
+  font-size: 16px;
+  max-width: 80%;
+}
+
+@keyframes upDown{
+  0%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(15px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.arrow-down{
+  width: 50px;
+  margin-top: 35px;
+  animation: upDown 1.5s infinite;
+}
+
+.email-container{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.email-container img{
+  width: 40px;
+  margin-right: 15px;
+}
+
+.email-container a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Inter';
+  cursor: pointer;
+  font-size: 16px;
+}
+
+footer{
+  width: 100vw;
+  height: 150px;
+  background-color: var(--accent-color);
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a,p {
+  color: white;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-family: 'Inter';
+}

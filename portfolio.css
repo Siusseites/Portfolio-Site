@@ -210,6 +210,10 @@ h1{
   .grid-container{
     grid-template-columns: 1fr;
   }
+
+  .information{
+    text-align: center;
+  }
 }
 
 .über-mich{
